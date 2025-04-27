@@ -45,7 +45,7 @@ const createRoute = async (req, res) => {
     } = req.body;
 
     const route = await Route.create({
-      user: req.user.uid, // 🔥 Asignamos automáticamente el UID del usuario
+      user: req.user.uid, //Asignamos automáticamente el UID del usuario
       title,
       description,
       location,
