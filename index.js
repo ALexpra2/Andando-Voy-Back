@@ -36,7 +36,8 @@ app.use(session({
   saveUninitialized: false,
   cookie: {
     httpOnly: true,
-    secure: false // Cambiar a true si se usa HTTPS
+    secure: true, // Localhost: false. Producción: true
+    sameSite: 'none'
   }
 }));
 
