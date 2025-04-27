@@ -17,7 +17,7 @@ const loginUser = async (req, res) => {
   const { idToken } = req.body;
   try {
     await auth.verifyIdToken(idToken);
-    res.cookie("token", idToken, { httpOnly: true, secure: true }); // En producción usar secure: true
+    res.cookie("token", idToken, { httpOnly: true, secure: false }); // En producción usar secure: true
     res.json({ success: true });
   } catch (error) {
     console.error("Error verifying ID token:", error);

@@ -8,7 +8,7 @@ const { getUserRoutes, getRouteStats, createRoute, deleteRoute } = require('../c
 
 router.get('/', checkAuth, getUserRoutes);
 router.get('/stats', checkAuth, getRouteStats);
-router.post('/routes', upload.single('image'), checkAuth, createRoute);
+router.post('/', checkAuth, createRoute);
 router.delete('/:id', checkAuth, deleteRoute);
 
 module.exports = router;
