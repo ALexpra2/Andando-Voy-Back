@@ -23,7 +23,7 @@ const app = express();
 const PORT = process.env.PORT;
 
 app.use(cors({
-    origin: 'http://localhost:5173', 
+    origin: 'https://andando-hdv3vdu1g-alexpra2s-projects.vercel.app', 
     credentials: true               //permite enviar cookies
   }));
 app.use(express.json());
