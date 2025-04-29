@@ -41,6 +41,19 @@ app.use(session({
   }
 }));
 
+// *** MODIFICA ESTE BLOQUE DE CÓDIGO ***
+// Servir archivos estáticos desde la carpeta 'dist'
+const distPath = path.join(__dirname, '../AndandoVoy-Front/dist'); // Ajusta la ruta si 'dist' está dentro de 'frontend'
+// o
+// const distPath = path.join(__dirname, 'dist'); // Si 'dist' está en la raíz del backend
+// ... y así sucesivamente, según tu estructura de carpetas.
+app.use(express.static(distPath));
+
+// Ruta "catch-all" para servir el index.html para cualquier otra petición
+app.get('*', (req, res) => {
+  res.sendFile(path.join(distPath, 'index.html'));
+});
+
 app.use('/api', routes);
 
 dbConnection();
