@@ -23,9 +23,8 @@ const app = express();
 const PORT = process.env.PORT;
 
 app.use(cors({
-    origin: 'https://andando-hdv3vdu1g-alexpra2s-projects.vercel.app', 
-    credentials: true               //permite enviar cookies
-  }));
+  origin: '*'
+}));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
