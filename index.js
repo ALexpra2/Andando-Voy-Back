@@ -23,7 +23,7 @@ const app = express();
 const PORT = process.env.PORT;
 
 app.use(cors({
-  origin: 'https://andando-voy-git-main-alexpra2s-projects.vercel.app',
+  origin: 'https://andando-voy-front-git-main-alexpra2s-projects.vercel.app',
   credentials: true
 }));
 app.use(express.json());
