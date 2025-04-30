@@ -43,10 +43,8 @@ app.use(session({
 }));
 
 // *** MODIFICA ESTE BLOQUE DE CÓDIGO ***
-// Servir archivos estáticos desde la carpeta 'dist'
-const distPath = path.join(__dirname, '../AndandoVoy-Front/dist'); // Ajusta la ruta si 'dist' está dentro de 'frontend'
-// o
-// const distPath = path.join(__dirname, 'dist'); // Si 'dist' está en la raíz del backend
+
+const distPath = path.join(__dirname, 'dist'); 
 // ... y así sucesivamente, según tu estructura de carpetas.
 app.use(express.static(distPath));
 
