@@ -9,6 +9,7 @@ const serviceAccount = require('./config/firebase')
 const cookieParser = require('cookie-parser');
 
 const session = require('express-session');
+const path = require('path');
 
 
 //Inicializamos admin, se inicia aqui antes de importar y ejecutar el middleware)
